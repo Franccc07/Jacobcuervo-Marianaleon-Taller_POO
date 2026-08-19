@@ -1,11 +1,12 @@
-public class Motocicleta {
+public class Motocicleta extends Vehiculo {
 
-    int cilindraje;
+    private int cilindraje;
 
     public Motocicleta() {
     }
 
-    public Motocicleta(int cilindraje) {
+    public Motocicleta(String marca, String modelo, int año, String placa, double precioBase, int cilindraje) {
+        super(marca, modelo, año, placa, precioBase);
         this.cilindraje = cilindraje;
     }
 
@@ -15,5 +16,17 @@ public class Motocicleta {
 
     public void setCilindraje(int cilindraje) {
         this.cilindraje = cilindraje;
+    }
+
+    @Override
+    public String toString() {
+        return "Motocicleta{" +
+                "cilindraje=" + cilindraje +
+                ", placa='" + placa + '\'' +
+                ", marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", año=" + año +
+                ", precioBase=" + precioBase +
+                '}';
     }
 }

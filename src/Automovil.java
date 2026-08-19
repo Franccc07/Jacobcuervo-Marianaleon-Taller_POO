@@ -1,15 +1,14 @@
-public class Automovil {
-    int numeroPuertas;
-    String tipoCombustible;
+public class Automovil extends  Vehiculo{
+    private int numeroPuertas;
+    private String tipoCombustible;
 
     public Automovil() {
     }
 
-    public Automovil(int numeroPuertas, String tipoCombustible) {
+    public Automovil(String marca, String modelo, int año, String placa, double precioBase, int numeroPuertas, String tipoCombustible) {
+        super(marca, modelo, año, placa, precioBase);
         this.numeroPuertas = numeroPuertas;
         this.tipoCombustible = tipoCombustible;
-
-
     }
 
     public int getNumeroPuertas() {
@@ -28,5 +27,16 @@ public class Automovil {
         this.tipoCombustible = tipoCombustible;
     }
 
-
+    @Override
+    public String toString() {
+        return "Automovil{" +
+                "numeroPuertas=" + numeroPuertas +
+                ", tipoCombustible='" + tipoCombustible + '\'' +
+                ", placa='" + placa + '\'' +
+                ", marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", año=" + año +
+                ", precioBase=" + precioBase +
+                '}';
+    }
 }
