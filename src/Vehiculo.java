@@ -1,19 +1,20 @@
 public abstract class Vehiculo {
-    private String placa;
-    private String marca;
-    private String modelo;
-    private int año;
-    private double precioBase;
+
+    protected String placa;
+    protected String marca;
+    protected String modelo;
+    protected int año;
+    protected double precioBase;
 
     public Vehiculo() {
     }
 
-    public Vehiculo(double precioBase, int año, String modelo, String marca, String placa) {
-        this.precioBase = precioBase;
-        this.año = año;
-        this.modelo = modelo;
+    public Vehiculo(String marca, String modelo, int año, String placa, double precioBase) {
         this.marca = marca;
+        this.modelo = modelo;
+        this.año = año;
         this.placa = placa;
+        this.precioBase = precioBase;
     }
 
     public String getPlaca() {
@@ -57,12 +58,15 @@ public abstract class Vehiculo {
     }
 
 
-
-
-
-
-
-
-
+    @Override
+    public String toString() {
+        return "Vehiculo{" +
+                "placa='" + placa + '\'' +
+                ", marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", año=" + año +
+                ", precioBase=" + precioBase +
+                '}';
+    }
 
 }
